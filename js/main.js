@@ -87,12 +87,18 @@ function animate(){
 //animate();
 
 function toggleGlitter() {
-	var glitter = document.getElementById("glitter");
+	var spark = document.getElementById("glitter");
 	
-	if (glitter.checked) {
+	console.log('ok ok ok');
+	if (spark.checked == true) {
+		console.log('getting there');
 		sparkle();
 	}
+	else {
+		console.log('no clue bro');
+	}
 }
+
 
 window.onload=function() { if (document.getElementById) {
 	var i, rats, rlef, rdow;
@@ -118,21 +124,9 @@ window.onload=function() { if (document.getElementById) {
 		document.body.appendChild(star[i]=rats);
 	}
 	set_width();
-	toggleGlitter()
+	//toggleGlitter();
 }}
 
-function toggleGlitter() {
-	var spark = document.getElementById("glitter");
-	
-	console.log('ok ok ok');
-	if (spark.checked == true) {
-		console.log('getting there');
-		sparkle();
-	}
-	else {
-		console.log('no clue bro');
-	}
-}
 
 function sparkle() {
 	var c;
@@ -278,11 +272,6 @@ function newColour() {
 	c.sort(function(){return (0.5 - Math.random());});
 	return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
 }
-// ]]>
-
-
-
-
 
 /**
  * Sets up Justified Gallery.
