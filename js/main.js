@@ -1,5 +1,5 @@
 var colour="yellow"; // "random" can be replaced with any valid colour ie: "red"...
-var sparkles=100;// increase of decrease for number of sparkles falling
+var sparkles=70;// increase of decrease for number of sparkles falling
 
 var x=ox=400;
 var y=oy=300;
@@ -84,7 +84,15 @@ function animate(){
 	setTimeout("animate()",10);
 }
 
-animate();
+//animate();
+
+function toggleGlitter() {
+	var glitter = document.getElementById("glitter");
+	
+	if (glitter.checked) {
+		sparkle();
+	}
+}
 
 window.onload=function() { if (document.getElementById) {
 	var i, rats, rlef, rdow;
@@ -110,8 +118,21 @@ window.onload=function() { if (document.getElementById) {
 		document.body.appendChild(star[i]=rats);
 	}
 	set_width();
-	sparkle();
+	toggleGlitter()
 }}
+
+function toggleGlitter() {
+	var spark = document.getElementById("glitter");
+	
+	console.log('ok ok ok');
+	if (spark.checked == true) {
+		console.log('getting there');
+		sparkle();
+	}
+	else {
+		console.log('no clue bro');
+	}
+}
 
 function sparkle() {
 	var c;
